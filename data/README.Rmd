@@ -1,0 +1,23 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# NC Medicaid Data
+
+https://medicaid.ncdhhs.gov/documents/reports/enrollment-reports/medicaid-and-health-choice-enrollment-reports
+
+
+# State Population
+
+https://files.nc.gov/ncosbm/demog/countygrowth_cert_2016.html
+
+https://www.osbm.nc.gov/demog/county-estimates
