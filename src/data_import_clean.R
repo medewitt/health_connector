@@ -22,7 +22,39 @@ path <- "data/SFY_2019_Enrollment_Counts_by_County_and_Budget_Groups_0_2.xlsx"
 path %>% 
   excel_sheets() %>% 
   set_names() %>% 
-  map(read_excel, path = path)-> medicaid_data_raw
+  map(read_excel, path = path)-> medicaid_data_raw_2019
+
+path <- "data/SFY_2018_Enrollment_Counts_by_County_and_Budget_Groups.xlsx"
+
+path %>% 
+  excel_sheets() %>% 
+  set_names() %>% 
+  map(read_excel, path = path)-> medicaid_data_raw_2018
+
+path <- "data/SFY_2017_Enrollment_Counts_by_County_and_Budget_Groups_0_2.xlsx"
+
+path %>% 
+  excel_sheets() %>% 
+  set_names() %>% 
+  map(read_excel, path = path)-> medicaid_data_raw_2017
+
+path <- "data/SFY 2016_Monthly_Enrollment_Counts_by_County_and_Budget_Groups.xlsx"
+
+path %>% 
+  excel_sheets() %>% 
+  set_names() %>% 
+  map(read_excel, path = path)-> medicaid_data_raw_2016
+
+path <- "data/SFY2015_Annual_Unduplicated_Enrollment_Counts_by_County_and_Budget_Groups.xlsx"
+
+path %>% 
+  excel_sheets() %>% 
+  set_names() %>% 
+  map(read_excel, path = path)-> medicaid_data_raw_2015
+
+
+medicaid_data_raw <- c(medicaid_data_raw_2018, medicaid_data_raw_2019, medicaid_data_raw_2017,
+                       medicaid_data_raw_2016, medicaid_data_raw_2015)
 
 data_range <- names(medicaid_data_raw)
 
@@ -39,6 +71,9 @@ medicaid_data_raw %>%
          month = str_trim(str_remove(string = month, pattern = "\\d+")) )%>% 
   mutate(county_name = str_to_title(tolower(county_name))) %>% 
   filter(year != 2019)-> medicaid_format
+
+medicaid_format %>% 
+  mutate(my_date = lubridate::ymd(glue::glue("{year}-{month}-{1}"))) -> medicaid_format
 
 
 # census data -------------------------------------------------------------
@@ -105,6 +140,9 @@ poverty_county_1 %>%
 
 fit <- lm(county_total~ july_2016_estimate + estimate + births, data = poverty_hospitals)
 
+fit_mle <- lme4::lmer(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
+                 data = poverty_hospitals)
+
 fit_bayes <- brm(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
                  data = poverty_hospitals,
                 iter = 2000, chains = 3, cores = 3)
@@ -145,3 +183,32 @@ poverty_county_predictions %>%
   xlab("")+
   ylab("Delta vs Prediction (1000s) \n(Positive = Greater Than Predicted, Negative = Less than Predicted)")+
   ggsave("2018-08_predicted_medicaid_nc.pdf", width = 11, height = 8)
+
+
+medicaid_format %>% 
+  filter(county_name == "Forsyth") %>% 
+  filter(county_total >0) %>% 
+  arrange(my_date)->medicaid_forsyth
+
+forsyth_ts <- ts(data = medicaid_forsyth$county_total, frequency = 12, start = c(2015,7) )
+forsyth_ts
+library(fpp2)
+
+#Graph Time Series
+autoplot(forsyth_ts)
+
+# Seasonal Decomp for Forsyth
+forsyth_ts %>% 
+  decompose(type="additive") %>%
+  autoplot() 
+
+fc <- ses(forsyth_ts, h=8)
+
+#Forecast
+forsyth_ts %>% forecast() %>%
+  autoplot() + ylab("Number of Medicaid Recipients")
+
+autoplot(fc) +
+  autolayer(fitted(fc), series="Fitted") +
+  ylab("Number of Medicaid Recipients") + xlab("Year")+
+  theme_minimal()
