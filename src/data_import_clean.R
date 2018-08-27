@@ -185,6 +185,9 @@ poverty_county_predictions %>%
   ggsave("2018-08_predicted_medicaid_nc.pdf", width = 11, height = 8)
 
 
+# time series forecasting -------------------------------------------------
+library(fpp2)
+
 medicaid_format %>% 
   filter(county_name == "Forsyth") %>% 
   filter(county_total >0) %>% 
@@ -192,7 +195,6 @@ medicaid_format %>%
 
 forsyth_ts <- ts(data = medicaid_forsyth$county_total, frequency = 12, start = c(2015,7) )
 forsyth_ts
-library(fpp2)
 
 #Graph Time Series
 autoplot(forsyth_ts)
@@ -208,6 +210,7 @@ fc <- ses(forsyth_ts, h=8)
 forsyth_ts %>% forecast() %>%
   autoplot() + ylab("Number of Medicaid Recipients")
 
+#exponsential smoothing method
 autoplot(fc) +
   autolayer(fitted(fc), series="Fitted") +
   ylab("Number of Medicaid Recipients") + xlab("Year")+
