@@ -184,6 +184,49 @@ poverty_county_predictions %>%
   ylab("Delta vs Prediction (1000s) \n(Positive = Greater Than Predicted, Negative = Less than Predicted)")+
   ggsave("2018-08_predicted_medicaid_nc.pdf", width = 11, height = 8)
 
+# general trends ----------------------------------------------------------
+library(scales)
+poverty_hospitals %>% 
+  filter(my_date==max(my_date)) %>% 
+  top_n( 4, county_total)->top_5_labels
+
+poverty_hospitals %>% 
+  mutate(my_color = as_factor(ifelse(county_name == "Forsyth", "Black", "Grey"))) %>% 
+  ggplot(aes(x = my_date, y = county_total/1000, group = county_name, color = my_color))+
+  geom_line(alpha = .5, size = 1)+
+  scale_color_manual(values = c("grey", "black"))+
+  theme_minimal()+
+  theme(legend.position = "none", panel.grid = element_blank())+
+  scale_x_date(labels = date_format("%b-%y"), date_breaks = "4 months")+
+  labs(
+    title = "Trend of Medicaid Enrollment Shows that Forsyth County is Growing",
+    caption = "Data from: American Community Survey \nAug 2018 NCDHHS Enrollment Reports \n 2016 NC OSBM Population Estimates",
+    y = "Thousands of Enrollments per Month",
+    x = NULL
+  )+
+  geom_text(aes(x = lubridate::ymd("2018-06-01"), y = 90-20, label = "Forsyth"), color = "black")+
+  geom_text(data = top_5_labels, 
+            aes(my_date-45, county_total/1000+5, label = county_name), color = "grey")+
+  ggsave("2018_nc_medicaid_trends_by_county.pdf", width = 11, height = 8)
+
+poverty_hospitals %>% 
+  filter(county_name == "Forsyth") %>% 
+  select(-countyname, -month, -year, -c(july_2016_estimate:n_beds)) %>% 
+  gather(variable, value, -county_name, -my_date) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  filter(value > 0) %>% 
+  ggplot(aes(my_date, value))+
+  geom_line()+
+  facet_wrap(~variable, scales = "free_y")+
+  labs(
+    title = "Forsyth County Medicaid Enrollment By Program Trends",
+    subtitle = "Note that y-axis scale values change",
+    caption = "Data from: American Community Survey \nAug 2018 NCDHHS Enrollment Reports \n 2016 NC OSBM Population Estimates",
+    x = NULL,
+    y= "Enrollments/ Month"
+  )+
+  theme_minimal()+
+  ggsave("2018_forsyth_medicaid_trends_by_county.pdf", width = 11, height = 8)
 
 # time series forecasting -------------------------------------------------
 library(fpp2)
@@ -208,7 +251,13 @@ fc <- ses(forsyth_ts, h=8)
 
 #Forecast
 forsyth_ts %>% forecast() %>%
-  autoplot() + ylab("Number of Medicaid Recipients")
+  autoplot() + ylab("Number of Medicaid Recipients")+
+  theme_minimal()+
+  labs(
+    title = "Forecasted Medicaid Enrollments by Month for Forsyth County",
+    subtitle = "Using ETS(A,A,N)"
+  )+
+  ggsave("2018_medicaid_enrollment_forecasts.pdf", width = 11, height = 8)
 
 #exponsential smoothing method
 autoplot(fc) +
