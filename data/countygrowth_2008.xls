@@ -1,0 +1,2321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.ContentTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.NoteContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphLegendBackground
+{
+  background-color: #FFFFFF;
+}
+.HeaderEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.Output
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #CCCCCC;
+}
+.FatalContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.WarnContentFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.NoteBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.DataStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.TitlesAndFooters
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Pages
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.Document
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Graph
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.DropShadowStyle
+{
+  color: #000000;
+}
+.BeforeCaption
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.ContentsDate
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+.IndexProcName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: decimal;
+}
+.Date
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+.ProcTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Table
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #CCCCCC;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+}
+.IndexAction
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Data
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.GraphBorderLines
+{
+  color: #000000;
+}
+.FooterEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.Container
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphValueText
+{
+  font-family: Arial;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+}
+.GraphLabelText
+{
+  font-family: Arial;
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.RowFooterEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.ExtendedPage
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #003399;
+  background-color: #FFFFFF;
+  border-width: 1pt;
+  text-align: center;
+}
+.ContentFolder
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: NONE;
+}
+.RowFooterStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.FooterFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.RowFooterFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.Caption
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Index
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.WarnBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Note
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.HeaderStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.NoteContentFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.DataEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.IndexTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.Byline
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.FatalBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.PagesDate
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+.ProcTitleFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.ByContentFolder
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: decimal;
+}
+.Frame
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphAxisLines
+{
+  color: #000000;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.RowHeaderFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.Header
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.GraphData9
+{
+  color: #9DAA2D;
+}
+.DataEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.Cell
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.WarnContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.PageNo
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.PagesTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.RowHeaderEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.PagesProcName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.ContentItem
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.HeaderEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.DataFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.FooterStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.FooterEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.ErrorContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphData1
+{
+  color: #FFA53D;
+}
+.HeaderStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.DataEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.GraphData3
+{
+  color: #EF6B48;
+}
+.IndexItem
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.RowFooter
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.TitleAndNoteContainer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  border-width: 0;
+  width: 100%;
+}
+.BylineContainer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  border-width: 0;
+  width: 100%;
+}
+.Contents
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.GraphData2
+{
+  color: #F7DF54;
+}
+.FatalContentFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphData11
+{
+  color: #2EA64A;
+}
+.GraphData5
+{
+  color: #CB79C8;
+}
+.BodyDate
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.GraphFloor
+{
+  background-color: #FFFFFF;
+}
+.FooterEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.GraphData10
+{
+  color: #6C69D9;
+}
+.GraphData4
+{
+  color: #61A6E7;
+}
+.GraphData6
+{
+  color: #85CE79;
+}
+.GraphData12
+{
+  color: #C17D35;
+}
+.RowFooterStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.HeadersAndFooters
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.RowHeaderStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.UserText
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.ErrorBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.FooterStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.PagesItem
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.ContentProcName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+  list-style-type: decimal;
+}
+.AfterCaption
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphOutlines
+{
+  color: #000000;
+}
+.RowHeaderStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.DataStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.RowHeaderEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.Footer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.FolderAction
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.SystemFooter
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: italic;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.HeaderEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #6495ED;
+}
+.SystemTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.ErrorContentFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #003399;
+  background-color: #FFFFFF;
+}
+.GraphGridLines
+{
+  color: #E0E0E0;
+}
+.GraphTitleText
+{
+  color: #003399;
+}
+.GraphData7
+{
+  color: #967CD0;
+}
+.GraphBackground
+{
+  background-color: #FFFFFF;
+}
+.GraphData8
+{
+  color: #DD6475;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle" style=" font-size: 14pt;">2008 Revised County Population Estimates</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="none" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c Header" colspan="3" scope="colgroup">&nbsp;</th>
+<th class="c Header" colspan="2" scope="colgroup">Growth</th>
+<th class="c Header" colspan="3" scope="colgroup">&nbsp;</th>
+<th class="c Header" colspan="2" scope="colgroup">Net Migration</th>
+</tr>
+<tr>
+<th class="c Header" scope="col">County</th>
+<th class="c Header" scope="col">July 2008 Estimate</th>
+<th class="c Header" scope="col">April 2000 Estimate Base</th>
+<th class="c Header" scope="col">Amount</th>
+<th class="c Header" scope="col">Percent</th>
+<th class="c Header" scope="col">Total Births, A2000 - J2008</th>
+<th class="c Header" scope="col">Total Deaths, A2000 - J2008</th>
+<th class="c Header" scope="col">Natural Growth, A2000 - J2008</th>
+<th class="c Header" scope="col">Amount</th>
+<th class="c Header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l Data">Alamance</td>
+<td class="r Data">   146,831</td>
+<td class="r Data">   130,750</td>
+<td class="r Data">    16,081</td>
+<td class="r Data"> 12.3</td>
+<td class="r Data">    15,509</td>
+<td class="r Data">    11,057</td>
+<td class="r Data">     4,452</td>
+<td class="r Data">    11,629</td>
+<td class="r Data">  8.9</td>
+</tr>
+<tr>
+<td class="l Data">Alexander</td>
+<td class="r Data">    36,743</td>
+<td class="r Data">    33,566</td>
+<td class="r Data">     3,177</td>
+<td class="r Data">  9.5</td>
+<td class="r Data">     3,463</td>
+<td class="r Data">     2,494</td>
+<td class="r Data">       969</td>
+<td class="r Data">     2,208</td>
+<td class="r Data">  6.6</td>
+</tr>
+<tr>
+<td class="l Data">Alleghany</td>
+<td class="r Data">    11,035</td>
+<td class="r Data">    10,672</td>
+<td class="r Data">       363</td>
+<td class="r Data">  3.4</td>
+<td class="r Data">       850</td>
+<td class="r Data">     1,128</td>
+<td class="r Data">      -278</td>
+<td class="r Data">       641</td>
+<td class="r Data">  6.0</td>
+</tr>
+<tr>
+<td class="l Data">Anson</td>
+<td class="r Data">    26,809</td>
+<td class="r Data">    25,268</td>
+<td class="r Data">     1,541</td>
+<td class="r Data">  6.1</td>
+<td class="r Data">     2,644</td>
+<td class="r Data">     2,363</td>
+<td class="r Data">       281</td>
+<td class="r Data">     1,260</td>
+<td class="r Data">  5.0</td>
+</tr>
+<tr>
+<td class="l Data">Ashe</td>
+<td class="r Data">    26,756</td>
+<td class="r Data">    24,394</td>
+<td class="r Data">     2,362</td>
+<td class="r Data">  9.7</td>
+<td class="r Data">     2,211</td>
+<td class="r Data">     2,435</td>
+<td class="r Data">      -224</td>
+<td class="r Data">     2,586</td>
+<td class="r Data"> 10.6</td>
+</tr>
+<tr>
+<td class="l Data">Avery</td>
+<td class="r Data">    17,988</td>
+<td class="r Data">    17,149</td>
+<td class="r Data">       839</td>
+<td class="r Data">  4.9</td>
+<td class="r Data">     1,438</td>
+<td class="r Data">     1,548</td>
+<td class="r Data">      -110</td>
+<td class="r Data">       949</td>
+<td class="r Data">  5.5</td>
+</tr>
+<tr>
+<td class="l Data">Beaufort</td>
+<td class="r Data">    46,659</td>
+<td class="r Data">    44,916</td>
+<td class="r Data">     1,743</td>
+<td class="r Data">  3.9</td>
+<td class="r Data">     4,961</td>
+<td class="r Data">     4,443</td>
+<td class="r Data">       518</td>
+<td class="r Data">     1,225</td>
+<td class="r Data">  2.7</td>
+</tr>
+<tr>
+<td class="l Data">Bertie</td>
+<td class="r Data">    21,076</td>
+<td class="r Data">    19,765</td>
+<td class="r Data">     1,311</td>
+<td class="r Data">  6.6</td>
+<td class="r Data">     2,033</td>
+<td class="r Data">     2,073</td>
+<td class="r Data">       -40</td>
+<td class="r Data">     1,351</td>
+<td class="r Data">  6.8</td>
+</tr>
+<tr>
+<td class="l Data">Bladen</td>
+<td class="r Data">    34,988</td>
+<td class="r Data">    32,252</td>
+<td class="r Data">     2,736</td>
+<td class="r Data">  8.5</td>
+<td class="r Data">     3,740</td>
+<td class="r Data">     3,222</td>
+<td class="r Data">       518</td>
+<td class="r Data">     2,218</td>
+<td class="r Data">  6.9</td>
+</tr>
+<tr>
+<td class="l Data">Brunswick</td>
+<td class="r Data">   102,275</td>
+<td class="r Data">    73,121</td>
+<td class="r Data">    29,154</td>
+<td class="r Data"> 39.9</td>
+<td class="r Data">     7,919</td>
+<td class="r Data">     6,805</td>
+<td class="r Data">     1,114</td>
+<td class="r Data">    28,040</td>
+<td class="r Data"> 38.3</td>
+</tr>
+<tr>
+<td class="l Data">Buncombe</td>
+<td class="r Data">   232,814</td>
+<td class="r Data">   206,365</td>
+<td class="r Data">    26,449</td>
+<td class="r Data"> 12.8</td>
+<td class="r Data">    21,692</td>
+<td class="r Data">    18,247</td>
+<td class="r Data">     3,445</td>
+<td class="r Data">    23,004</td>
+<td class="r Data"> 11.1</td>
+</tr>
+<tr>
+<td class="l Data">Burke</td>
+<td class="r Data">    89,984</td>
+<td class="r Data">    89,163</td>
+<td class="r Data">       821</td>
+<td class="r Data">  0.9</td>
+<td class="r Data">     8,515</td>
+<td class="r Data">     7,040</td>
+<td class="r Data">     1,475</td>
+<td class="r Data">      -654</td>
+<td class="r Data"> -0.7</td>
+</tr>
+<tr>
+<td class="l Data">Cabarrus</td>
+<td class="r Data">   170,901</td>
+<td class="r Data">   131,043</td>
+<td class="r Data">    39,858</td>
+<td class="r Data"> 30.4</td>
+<td class="r Data">    19,370</td>
+<td class="r Data">     9,986</td>
+<td class="r Data">     9,384</td>
+<td class="r Data">    30,474</td>
+<td class="r Data"> 23.3</td>
+</tr>
+<tr>
+<td class="l Data">Caldwell</td>
+<td class="r Data">    81,900</td>
+<td class="r Data">    77,747</td>
+<td class="r Data">     4,153</td>
+<td class="r Data">  5.3</td>
+<td class="r Data">     7,791</td>
+<td class="r Data">     6,485</td>
+<td class="r Data">     1,306</td>
+<td class="r Data">     2,847</td>
+<td class="r Data">  3.7</td>
+</tr>
+<tr>
+<td class="l Data">Camden</td>
+<td class="r Data">     9,841</td>
+<td class="r Data">     6,884</td>
+<td class="r Data">     2,957</td>
+<td class="r Data"> 43.0</td>
+<td class="r Data">       782</td>
+<td class="r Data">       556</td>
+<td class="r Data">       226</td>
+<td class="r Data">     2,731</td>
+<td class="r Data"> 39.7</td>
+</tr>
+<tr>
+<td class="l Data">Carteret</td>
+<td class="r Data">    64,736</td>
+<td class="r Data">    59,334</td>
+<td class="r Data">     5,402</td>
+<td class="r Data">  9.1</td>
+<td class="r Data">     5,152</td>
+<td class="r Data">     5,662</td>
+<td class="r Data">      -510</td>
+<td class="r Data">     5,912</td>
+<td class="r Data"> 10.0</td>
+</tr>
+<tr>
+<td class="l Data">Caswell</td>
+<td class="r Data">    23,570</td>
+<td class="r Data">    23,474</td>
+<td class="r Data">        96</td>
+<td class="r Data">  0.4</td>
+<td class="r Data">     1,956</td>
+<td class="r Data">     2,003</td>
+<td class="r Data">       -47</td>
+<td class="r Data">       143</td>
+<td class="r Data">  0.6</td>
+</tr>
+<tr>
+<td class="l Data">Catawba</td>
+<td class="r Data">   152,354</td>
+<td class="r Data">   141,700</td>
+<td class="r Data">    10,654</td>
+<td class="r Data">  7.5</td>
+<td class="r Data">    16,879</td>
+<td class="r Data">    11,036</td>
+<td class="r Data">     5,843</td>
+<td class="r Data">     4,811</td>
+<td class="r Data">  3.4</td>
+</tr>
+<tr>
+<td class="l Data">Chatham</td>
+<td class="r Data">    61,198</td>
+<td class="r Data">    49,396</td>
+<td class="r Data">    11,802</td>
+<td class="r Data"> 23.9</td>
+<td class="r Data">     5,860</td>
+<td class="r Data">     4,177</td>
+<td class="r Data">     1,683</td>
+<td class="r Data">    10,119</td>
+<td class="r Data"> 20.5</td>
+</tr>
+<tr>
+<td class="l Data">Cherokee</td>
+<td class="r Data">    27,187</td>
+<td class="r Data">    24,261</td>
+<td class="r Data">     2,926</td>
+<td class="r Data"> 12.1</td>
+<td class="r Data">     2,183</td>
+<td class="r Data">     2,620</td>
+<td class="r Data">      -437</td>
+<td class="r Data">     3,363</td>
+<td class="r Data"> 13.9</td>
+</tr>
+<tr>
+<td class="l Data">Chowan</td>
+<td class="r Data">    15,004</td>
+<td class="r Data">    14,522</td>
+<td class="r Data">       482</td>
+<td class="r Data">  3.3</td>
+<td class="r Data">     1,511</td>
+<td class="r Data">     1,510</td>
+<td class="r Data">         1</td>
+<td class="r Data">       481</td>
+<td class="r Data">  3.3</td>
+</tr>
+<tr>
+<td class="l Data">Clay</td>
+<td class="r Data">    10,299</td>
+<td class="r Data">     8,778</td>
+<td class="r Data">     1,521</td>
+<td class="r Data"> 17.3</td>
+<td class="r Data">       683</td>
+<td class="r Data">       956</td>
+<td class="r Data">      -273</td>
+<td class="r Data">     1,794</td>
+<td class="r Data"> 20.4</td>
+</tr>
+<tr>
+<td class="l Data">Cleveland</td>
+<td class="r Data">    96,967</td>
+<td class="r Data">    96,129</td>
+<td class="r Data">       838</td>
+<td class="r Data">  0.9</td>
+<td class="r Data">    10,027</td>
+<td class="r Data">     8,418</td>
+<td class="r Data">     1,609</td>
+<td class="r Data">      -771</td>
+<td class="r Data"> -0.8</td>
+</tr>
+<tr>
+<td class="l Data">Columbus</td>
+<td class="r Data">    56,568</td>
+<td class="r Data">    54,758</td>
+<td class="r Data">     1,810</td>
+<td class="r Data">  3.3</td>
+<td class="r Data">     6,802</td>
+<td class="r Data">     5,301</td>
+<td class="r Data">     1,501</td>
+<td class="r Data">       309</td>
+<td class="r Data">  0.6</td>
+</tr>
+<tr>
+<td class="l Data">Craven</td>
+<td class="r Data">    99,626</td>
+<td class="r Data">    91,526</td>
+<td class="r Data">     8,100</td>
+<td class="r Data">  8.8</td>
+<td class="r Data">    13,085</td>
+<td class="r Data">     7,262</td>
+<td class="r Data">     5,823</td>
+<td class="r Data">     2,277</td>
+<td class="r Data">  2.5</td>
+</tr>
+<tr>
+<td class="l Data">Cumberland</td>
+<td class="r Data">   311,113</td>
+<td class="r Data">   302,978</td>
+<td class="r Data">     8,135</td>
+<td class="r Data">  2.7</td>
+<td class="r Data">    45,116</td>
+<td class="r Data">    16,864</td>
+<td class="r Data">    28,252</td>
+<td class="r Data">   -20,117</td>
+<td class="r Data"> -6.6</td>
+</tr>
+<tr>
+<td class="l Data">Currituck</td>
+<td class="r Data">    23,474</td>
+<td class="r Data">    18,179</td>
+<td class="r Data">     5,295</td>
+<td class="r Data"> 29.1</td>
+<td class="r Data">     1,973</td>
+<td class="r Data">     1,434</td>
+<td class="r Data">       539</td>
+<td class="r Data">     4,756</td>
+<td class="r Data"> 26.2</td>
+</tr>
+<tr>
+<td class="l Data">Dare</td>
+<td class="r Data">    34,142</td>
+<td class="r Data">    29,959</td>
+<td class="r Data">     4,183</td>
+<td class="r Data"> 14.0</td>
+<td class="r Data">     3,432</td>
+<td class="r Data">     2,152</td>
+<td class="r Data">     1,280</td>
+<td class="r Data">     2,903</td>
+<td class="r Data">  9.7</td>
+</tr>
+<tr>
+<td class="l Data">Davidson</td>
+<td class="r Data">   159,623</td>
+<td class="r Data">   147,248</td>
+<td class="r Data">    12,375</td>
+<td class="r Data">  8.4</td>
+<td class="r Data">    15,888</td>
+<td class="r Data">    11,851</td>
+<td class="r Data">     4,037</td>
+<td class="r Data">     8,338</td>
+<td class="r Data">  5.7</td>
+</tr>
+<tr>
+<td class="l Data">Davie</td>
+<td class="r Data">    40,274</td>
+<td class="r Data">    34,841</td>
+<td class="r Data">     5,433</td>
+<td class="r Data"> 15.6</td>
+<td class="r Data">     3,665</td>
+<td class="r Data">     2,852</td>
+<td class="r Data">       813</td>
+<td class="r Data">     4,620</td>
+<td class="r Data"> 13.3</td>
+</tr>
+<tr>
+<td class="l Data">Duplin</td>
+<td class="r Data">    56,880</td>
+<td class="r Data">    49,054</td>
+<td class="r Data">     7,826</td>
+<td class="r Data"> 16.0</td>
+<td class="r Data">     6,655</td>
+<td class="r Data">     4,176</td>
+<td class="r Data">     2,479</td>
+<td class="r Data">     5,347</td>
+<td class="r Data"> 10.9</td>
+</tr>
+<tr>
+<td class="l Data">Durham</td>
+<td class="r Data">   258,336</td>
+<td class="r Data">   223,270</td>
+<td class="r Data">    35,066</td>
+<td class="r Data"> 15.7</td>
+<td class="r Data">    33,207</td>
+<td class="r Data">    13,944</td>
+<td class="r Data">    19,263</td>
+<td class="r Data">    15,803</td>
+<td class="r Data">  7.1</td>
+</tr>
+<tr>
+<td class="l Data">Edgecombe</td>
+<td class="r Data">    55,777</td>
+<td class="r Data">    55,604</td>
+<td class="r Data">       173</td>
+<td class="r Data">  0.3</td>
+<td class="r Data">     6,338</td>
+<td class="r Data">     4,983</td>
+<td class="r Data">     1,355</td>
+<td class="r Data">    -1,182</td>
+<td class="r Data"> -2.1</td>
+</tr>
+<tr>
+<td class="l Data">Forsyth</td>
+<td class="r Data">   342,975</td>
+<td class="r Data">   306,274</td>
+<td class="r Data">    36,701</td>
+<td class="r Data"> 12.0</td>
+<td class="r Data">    39,234</td>
+<td class="r Data">    23,082</td>
+<td class="r Data">    16,152</td>
+<td class="r Data">    20,549</td>
+<td class="r Data">  6.7</td>
+</tr>
+<tr>
+<td class="l Data">Franklin</td>
+<td class="r Data">    58,463</td>
+<td class="r Data">    47,284</td>
+<td class="r Data">    11,179</td>
+<td class="r Data"> 23.6</td>
+<td class="r Data">     5,706</td>
+<td class="r Data">     3,693</td>
+<td class="r Data">     2,013</td>
+<td class="r Data">     9,166</td>
+<td class="r Data"> 19.4</td>
+</tr>
+<tr>
+<td class="l Data">Gaston</td>
+<td class="r Data">   203,143</td>
+<td class="r Data">   190,445</td>
+<td class="r Data">    12,698</td>
+<td class="r Data">  6.7</td>
+<td class="r Data">    21,822</td>
+<td class="r Data">    16,181</td>
+<td class="r Data">     5,641</td>
+<td class="r Data">     7,057</td>
+<td class="r Data">  3.7</td>
+</tr>
+<tr>
+<td class="l Data">Gates</td>
+<td class="r Data">    12,168</td>
+<td class="r Data">    10,521</td>
+<td class="r Data">     1,647</td>
+<td class="r Data"> 15.7</td>
+<td class="r Data">       971</td>
+<td class="r Data">       995</td>
+<td class="r Data">       -24</td>
+<td class="r Data">     1,671</td>
+<td class="r Data"> 15.9</td>
+</tr>
+<tr>
+<td class="l Data">Graham</td>
+<td class="r Data">     8,638</td>
+<td class="r Data">     7,996</td>
+<td class="r Data">       642</td>
+<td class="r Data">  8.0</td>
+<td class="r Data">       830</td>
+<td class="r Data">       818</td>
+<td class="r Data">        12</td>
+<td class="r Data">       630</td>
+<td class="r Data">  7.9</td>
+</tr>
+<tr>
+<td class="l Data">Granville</td>
+<td class="r Data">    58,511</td>
+<td class="r Data">    48,486</td>
+<td class="r Data">    10,025</td>
+<td class="r Data"> 20.7</td>
+<td class="r Data">     5,109</td>
+<td class="r Data">     3,859</td>
+<td class="r Data">     1,250</td>
+<td class="r Data">     8,775</td>
+<td class="r Data"> 18.1</td>
+</tr>
+<tr>
+<td class="l Data">Greene</td>
+<td class="r Data">    20,940</td>
+<td class="r Data">    18,957</td>
+<td class="r Data">     1,983</td>
+<td class="r Data"> 10.5</td>
+<td class="r Data">     2,059</td>
+<td class="r Data">     1,477</td>
+<td class="r Data">       582</td>
+<td class="r Data">     1,401</td>
+<td class="r Data">  7.4</td>
+</tr>
+<tr>
+<td class="l Data">Guilford</td>
+<td class="r Data">   474,323</td>
+<td class="r Data">   420,848</td>
+<td class="r Data">    53,475</td>
+<td class="r Data"> 12.7</td>
+<td class="r Data">    49,672</td>
+<td class="r Data">    29,268</td>
+<td class="r Data">    20,404</td>
+<td class="r Data">    33,071</td>
+<td class="r Data">  7.9</td>
+</tr>
+<tr>
+<td class="l Data">Halifax</td>
+<td class="r Data">    55,116</td>
+<td class="r Data">    57,444</td>
+<td class="r Data">    -2,328</td>
+<td class="r Data"> -4.1</td>
+<td class="r Data">     6,031</td>
+<td class="r Data">     5,427</td>
+<td class="r Data">       604</td>
+<td class="r Data">    -2,932</td>
+<td class="r Data"> -5.1</td>
+</tr>
+<tr>
+<td class="l Data">Harnett</td>
+<td class="r Data">   108,490</td>
+<td class="r Data">    90,978</td>
+<td class="r Data">    17,512</td>
+<td class="r Data"> 19.2</td>
+<td class="r Data">    12,360</td>
+<td class="r Data">     6,358</td>
+<td class="r Data">     6,002</td>
+<td class="r Data">    11,510</td>
+<td class="r Data"> 12.7</td>
+</tr>
+<tr>
+<td class="l Data">Haywood</td>
+<td class="r Data">    57,976</td>
+<td class="r Data">    54,025</td>
+<td class="r Data">     3,951</td>
+<td class="r Data">  7.3</td>
+<td class="r Data">     4,700</td>
+<td class="r Data">     5,482</td>
+<td class="r Data">      -782</td>
+<td class="r Data">     4,733</td>
+<td class="r Data">  8.8</td>
+</tr>
+<tr>
+<td class="l Data">Henderson</td>
+<td class="r Data">   104,086</td>
+<td class="r Data">    89,184</td>
+<td class="r Data">    14,902</td>
+<td class="r Data"> 16.7</td>
+<td class="r Data">     9,498</td>
+<td class="r Data">     9,868</td>
+<td class="r Data">      -370</td>
+<td class="r Data">    15,272</td>
+<td class="r Data"> 17.1</td>
+</tr>
+<tr>
+<td class="l Data">Hertford</td>
+<td class="r Data">    24,158</td>
+<td class="r Data">    22,588</td>
+<td class="r Data">     1,570</td>
+<td class="r Data">  7.0</td>
+<td class="r Data">     2,458</td>
+<td class="r Data">     2,394</td>
+<td class="r Data">        64</td>
+<td class="r Data">     1,506</td>
+<td class="r Data">  6.7</td>
+</tr>
+<tr>
+<td class="l Data">Hoke</td>
+<td class="r Data">    44,588</td>
+<td class="r Data">    33,708</td>
+<td class="r Data">    10,880</td>
+<td class="r Data"> 32.3</td>
+<td class="r Data">     6,130</td>
+<td class="r Data">     2,122</td>
+<td class="r Data">     4,008</td>
+<td class="r Data">     6,872</td>
+<td class="r Data"> 20.4</td>
+</tr>
+<tr>
+<td class="l Data">Hyde</td>
+<td class="r Data">     5,881</td>
+<td class="r Data">     5,817</td>
+<td class="r Data">        64</td>
+<td class="r Data">  1.1</td>
+<td class="r Data">       487</td>
+<td class="r Data">       557</td>
+<td class="r Data">       -70</td>
+<td class="r Data">       134</td>
+<td class="r Data">  2.3</td>
+</tr>
+<tr>
+<td class="l Data">Iredell</td>
+<td class="r Data">   154,753</td>
+<td class="r Data">   122,631</td>
+<td class="r Data">    32,122</td>
+<td class="r Data"> 26.2</td>
+<td class="r Data">    15,627</td>
+<td class="r Data">     9,814</td>
+<td class="r Data">     5,813</td>
+<td class="r Data">    26,309</td>
+<td class="r Data"> 21.5</td>
+</tr>
+<tr>
+<td class="l Data">Jackson</td>
+<td class="r Data">    38,659</td>
+<td class="r Data">    33,103</td>
+<td class="r Data">     5,556</td>
+<td class="r Data"> 16.8</td>
+<td class="r Data">     3,136</td>
+<td class="r Data">     2,620</td>
+<td class="r Data">       516</td>
+<td class="r Data">     5,040</td>
+<td class="r Data"> 15.2</td>
+</tr>
+<tr>
+<td class="l Data">Johnston</td>
+<td class="r Data">   160,062</td>
+<td class="r Data">   121,998</td>
+<td class="r Data">    38,064</td>
+<td class="r Data"> 31.2</td>
+<td class="r Data">    18,644</td>
+<td class="r Data">     8,452</td>
+<td class="r Data">    10,192</td>
+<td class="r Data">    27,872</td>
+<td class="r Data"> 22.8</td>
+</tr>
+<tr>
+<td class="l Data">Jones</td>
+<td class="r Data">    10,072</td>
+<td class="r Data">    10,311</td>
+<td class="r Data">      -239</td>
+<td class="r Data"> -2.3</td>
+<td class="r Data">       774</td>
+<td class="r Data">       945</td>
+<td class="r Data">      -171</td>
+<td class="r Data">       -68</td>
+<td class="r Data"> -0.7</td>
+</tr>
+<tr>
+<td class="l Data">Lee</td>
+<td class="r Data">    56,505</td>
+<td class="r Data">    49,196</td>
+<td class="r Data">     7,309</td>
+<td class="r Data"> 14.9</td>
+<td class="r Data">     7,154</td>
+<td class="r Data">     3,981</td>
+<td class="r Data">     3,173</td>
+<td class="r Data">     4,136</td>
+<td class="r Data">  8.4</td>
+</tr>
+<tr>
+<td class="l Data">Lenoir</td>
+<td class="r Data">    59,377</td>
+<td class="r Data">    59,636</td>
+<td class="r Data">      -259</td>
+<td class="r Data"> -0.4</td>
+<td class="r Data">     6,555</td>
+<td class="r Data">     5,755</td>
+<td class="r Data">       800</td>
+<td class="r Data">    -1,059</td>
+<td class="r Data"> -1.8</td>
+</tr>
+<tr>
+<td class="l Data">Lincoln</td>
+<td class="r Data">    75,759</td>
+<td class="r Data">    63,810</td>
+<td class="r Data">    11,949</td>
+<td class="r Data"> 18.7</td>
+<td class="r Data">     7,278</td>
+<td class="r Data">     4,990</td>
+<td class="r Data">     2,288</td>
+<td class="r Data">     9,661</td>
+<td class="r Data"> 15.1</td>
+</tr>
+<tr>
+<td class="l Data">Macon</td>
+<td class="r Data">    33,744</td>
+<td class="r Data">    29,802</td>
+<td class="r Data">     3,942</td>
+<td class="r Data"> 13.2</td>
+<td class="r Data">     2,837</td>
+<td class="r Data">     3,324</td>
+<td class="r Data">      -487</td>
+<td class="r Data">     4,429</td>
+<td class="r Data"> 14.9</td>
+</tr>
+<tr>
+<td class="l Data">Madison</td>
+<td class="r Data">    20,538</td>
+<td class="r Data">    19,612</td>
+<td class="r Data">       926</td>
+<td class="r Data">  4.7</td>
+<td class="r Data">     1,725</td>
+<td class="r Data">     1,846</td>
+<td class="r Data">      -121</td>
+<td class="r Data">     1,047</td>
+<td class="r Data">  5.3</td>
+</tr>
+<tr>
+<td class="l Data">Martin</td>
+<td class="r Data">    24,497</td>
+<td class="r Data">    25,549</td>
+<td class="r Data">    -1,052</td>
+<td class="r Data"> -4.1</td>
+<td class="r Data">     2,525</td>
+<td class="r Data">     2,639</td>
+<td class="r Data">      -114</td>
+<td class="r Data">      -938</td>
+<td class="r Data"> -3.7</td>
+</tr>
+<tr>
+<td class="l Data">McDowell</td>
+<td class="r Data">    44,746</td>
+<td class="r Data">    42,134</td>
+<td class="r Data">     2,612</td>
+<td class="r Data">  6.2</td>
+<td class="r Data">     4,310</td>
+<td class="r Data">     3,646</td>
+<td class="r Data">       664</td>
+<td class="r Data">     1,948</td>
+<td class="r Data">  4.6</td>
+</tr>
+<tr>
+<td class="l Data">Mecklenburg</td>
+<td class="r Data">   888,730</td>
+<td class="r Data">   695,348</td>
+<td class="r Data">   193,382</td>
+<td class="r Data"> 27.8</td>
+<td class="r Data">   109,199</td>
+<td class="r Data">    39,115</td>
+<td class="r Data">    70,084</td>
+<td class="r Data">   123,298</td>
+<td class="r Data"> 17.7</td>
+</tr>
+<tr>
+<td class="l Data">Mitchell</td>
+<td class="r Data">    15,566</td>
+<td class="r Data">    15,687</td>
+<td class="r Data">      -121</td>
+<td class="r Data"> -0.8</td>
+<td class="r Data">     1,353</td>
+<td class="r Data">     1,666</td>
+<td class="r Data">      -313</td>
+<td class="r Data">       192</td>
+<td class="r Data">  1.2</td>
+</tr>
+<tr>
+<td class="l Data">Montgomery</td>
+<td class="r Data">    27,715</td>
+<td class="r Data">    26,797</td>
+<td class="r Data">       918</td>
+<td class="r Data">  3.4</td>
+<td class="r Data">     3,266</td>
+<td class="r Data">     2,219</td>
+<td class="r Data">     1,047</td>
+<td class="r Data">      -129</td>
+<td class="r Data"> -0.5</td>
+</tr>
+<tr>
+<td class="l Data">Moore</td>
+<td class="r Data">    85,954</td>
+<td class="r Data">    74,772</td>
+<td class="r Data">    11,182</td>
+<td class="r Data"> 15.0</td>
+<td class="r Data">     7,792</td>
+<td class="r Data">     7,641</td>
+<td class="r Data">       151</td>
+<td class="r Data">    11,031</td>
+<td class="r Data"> 14.8</td>
+</tr>
+<tr>
+<td class="l Data">Nash</td>
+<td class="r Data">    93,432</td>
+<td class="r Data">    87,378</td>
+<td class="r Data">     6,054</td>
+<td class="r Data">  6.9</td>
+<td class="r Data">    10,130</td>
+<td class="r Data">     7,425</td>
+<td class="r Data">     2,705</td>
+<td class="r Data">     3,349</td>
+<td class="r Data">  3.8</td>
+</tr>
+<tr>
+<td class="l Data">New Hanover</td>
+<td class="r Data">   197,445</td>
+<td class="r Data">   160,315</td>
+<td class="r Data">    37,130</td>
+<td class="r Data"> 23.2</td>
+<td class="r Data">    18,383</td>
+<td class="r Data">    12,094</td>
+<td class="r Data">     6,289</td>
+<td class="r Data">    30,841</td>
+<td class="r Data"> 19.2</td>
+</tr>
+<tr>
+<td class="l Data">Northampton</td>
+<td class="r Data">    21,992</td>
+<td class="r Data">    22,051</td>
+<td class="r Data">       -59</td>
+<td class="r Data"> -0.3</td>
+<td class="r Data">     2,011</td>
+<td class="r Data">     2,350</td>
+<td class="r Data">      -339</td>
+<td class="r Data">       280</td>
+<td class="r Data">  1.3</td>
+</tr>
+<tr>
+<td class="l Data">Onslow</td>
+<td class="r Data">   174,829</td>
+<td class="r Data">   150,418</td>
+<td class="r Data">    24,411</td>
+<td class="r Data"> 16.2</td>
+<td class="r Data">    27,533</td>
+<td class="r Data">     6,620</td>
+<td class="r Data">    20,913</td>
+<td class="r Data">     3,498</td>
+<td class="r Data">  2.3</td>
+</tr>
+<tr>
+<td class="l Data">Orange</td>
+<td class="r Data">   129,584</td>
+<td class="r Data">   115,589</td>
+<td class="r Data">    13,995</td>
+<td class="r Data"> 12.1</td>
+<td class="r Data">    10,938</td>
+<td class="r Data">     5,751</td>
+<td class="r Data">     5,187</td>
+<td class="r Data">     8,808</td>
+<td class="r Data">  7.6</td>
+</tr>
+<tr>
+<td class="l Data">Pamlico</td>
+<td class="r Data">    13,045</td>
+<td class="r Data">    12,896</td>
+<td class="r Data">       149</td>
+<td class="r Data">  1.2</td>
+<td class="r Data">       897</td>
+<td class="r Data">     1,214</td>
+<td class="r Data">      -317</td>
+<td class="r Data">       466</td>
+<td class="r Data">  3.6</td>
+</tr>
+<tr>
+<td class="l Data">Pasquotank</td>
+<td class="r Data">    40,504</td>
+<td class="r Data">    34,890</td>
+<td class="r Data">     5,614</td>
+<td class="r Data"> 16.1</td>
+<td class="r Data">     4,277</td>
+<td class="r Data">     2,987</td>
+<td class="r Data">     1,290</td>
+<td class="r Data">     4,324</td>
+<td class="r Data"> 12.4</td>
+</tr>
+<tr>
+<td class="l Data">Pender</td>
+<td class="r Data">    50,137</td>
+<td class="r Data">    41,071</td>
+<td class="r Data">     9,066</td>
+<td class="r Data"> 22.1</td>
+<td class="r Data">     4,234</td>
+<td class="r Data">     3,287</td>
+<td class="r Data">       947</td>
+<td class="r Data">     8,119</td>
+<td class="r Data"> 19.8</td>
+</tr>
+<tr>
+<td class="l Data">Perquimans</td>
+<td class="r Data">    13,209</td>
+<td class="r Data">    11,369</td>
+<td class="r Data">     1,840</td>
+<td class="r Data"> 16.2</td>
+<td class="r Data">     1,042</td>
+<td class="r Data">     1,223</td>
+<td class="r Data">      -181</td>
+<td class="r Data">     2,021</td>
+<td class="r Data"> 17.8</td>
+</tr>
+<tr>
+<td class="l Data">Person</td>
+<td class="r Data">    38,226</td>
+<td class="r Data">    35,603</td>
+<td class="r Data">     2,623</td>
+<td class="r Data">  7.4</td>
+<td class="r Data">     3,806</td>
+<td class="r Data">     3,216</td>
+<td class="r Data">       590</td>
+<td class="r Data">     2,033</td>
+<td class="r Data">  5.7</td>
+</tr>
+<tr>
+<td class="l Data">Pitt</td>
+<td class="r Data">   160,674</td>
+<td class="r Data">   133,759</td>
+<td class="r Data">    26,915</td>
+<td class="r Data"> 20.1</td>
+<td class="r Data">    17,327</td>
+<td class="r Data">     8,873</td>
+<td class="r Data">     8,454</td>
+<td class="r Data">    18,461</td>
+<td class="r Data"> 13.8</td>
+</tr>
+<tr>
+<td class="l Data">Polk</td>
+<td class="r Data">    19,961</td>
+<td class="r Data">    18,299</td>
+<td class="r Data">     1,662</td>
+<td class="r Data">  9.1</td>
+<td class="r Data">     1,360</td>
+<td class="r Data">     2,317</td>
+<td class="r Data">      -957</td>
+<td class="r Data">     2,619</td>
+<td class="r Data"> 14.3</td>
+</tr>
+<tr>
+<td class="l Data">Randolph</td>
+<td class="r Data">   139,140</td>
+<td class="r Data">   130,503</td>
+<td class="r Data">     8,637</td>
+<td class="r Data">  6.6</td>
+<td class="r Data">    14,992</td>
+<td class="r Data">     9,736</td>
+<td class="r Data">     5,256</td>
+<td class="r Data">     3,381</td>
+<td class="r Data">  2.6</td>
+</tr>
+<tr>
+<td class="l Data">Richmond</td>
+<td class="r Data">    46,675</td>
+<td class="r Data">    46,597</td>
+<td class="r Data">        78</td>
+<td class="r Data">  0.2</td>
+<td class="r Data">     5,351</td>
+<td class="r Data">     4,337</td>
+<td class="r Data">     1,014</td>
+<td class="r Data">      -936</td>
+<td class="r Data"> -2.0</td>
+</tr>
+<tr>
+<td class="l Data">Robeson</td>
+<td class="r Data">   131,704</td>
+<td class="r Data">   123,170</td>
+<td class="r Data">     8,534</td>
+<td class="r Data">  6.9</td>
+<td class="r Data">    17,401</td>
+<td class="r Data">     9,763</td>
+<td class="r Data">     7,638</td>
+<td class="r Data">       896</td>
+<td class="r Data">  0.7</td>
+</tr>
+<tr>
+<td class="l Data">Rockingham</td>
+<td class="r Data">    92,783</td>
+<td class="r Data">    92,018</td>
+<td class="r Data">       765</td>
+<td class="r Data">  0.8</td>
+<td class="r Data">     9,116</td>
+<td class="r Data">     8,648</td>
+<td class="r Data">       468</td>
+<td class="r Data">       297</td>
+<td class="r Data">  0.3</td>
+</tr>
+<tr>
+<td class="l Data">Rowan</td>
+<td class="r Data">   136,617</td>
+<td class="r Data">   130,364</td>
+<td class="r Data">     6,253</td>
+<td class="r Data">  4.8</td>
+<td class="r Data">    14,052</td>
+<td class="r Data">    11,028</td>
+<td class="r Data">     3,024</td>
+<td class="r Data">     3,229</td>
+<td class="r Data">  2.5</td>
+</tr>
+<tr>
+<td class="l Data">Rutherford</td>
+<td class="r Data">    66,594</td>
+<td class="r Data">    62,923</td>
+<td class="r Data">     3,671</td>
+<td class="r Data">  5.8</td>
+<td class="r Data">     6,406</td>
+<td class="r Data">     6,410</td>
+<td class="r Data">        -4</td>
+<td class="r Data">     3,675</td>
+<td class="r Data">  5.8</td>
+</tr>
+<tr>
+<td class="l Data">Sampson</td>
+<td class="r Data">    63,191</td>
+<td class="r Data">    60,157</td>
+<td class="r Data">     3,034</td>
+<td class="r Data">  5.0</td>
+<td class="r Data">     7,561</td>
+<td class="r Data">     5,105</td>
+<td class="r Data">     2,456</td>
+<td class="r Data">       578</td>
+<td class="r Data">  1.0</td>
+</tr>
+<tr>
+<td class="l Data">Scotland</td>
+<td class="r Data">    36,488</td>
+<td class="r Data">    35,952</td>
+<td class="r Data">       536</td>
+<td class="r Data">  1.5</td>
+<td class="r Data">     4,167</td>
+<td class="r Data">     3,044</td>
+<td class="r Data">     1,123</td>
+<td class="r Data">      -587</td>
+<td class="r Data"> -1.6</td>
+</tr>
+<tr>
+<td class="l Data">Stanly</td>
+<td class="r Data">    59,906</td>
+<td class="r Data">    58,092</td>
+<td class="r Data">     1,814</td>
+<td class="r Data">  3.1</td>
+<td class="r Data">     6,051</td>
+<td class="r Data">     4,930</td>
+<td class="r Data">     1,121</td>
+<td class="r Data">       693</td>
+<td class="r Data">  1.2</td>
+</tr>
+<tr>
+<td class="l Data">Stokes</td>
+<td class="r Data">    46,872</td>
+<td class="r Data">    44,640</td>
+<td class="r Data">     2,232</td>
+<td class="r Data">  5.0</td>
+<td class="r Data">     4,000</td>
+<td class="r Data">     3,556</td>
+<td class="r Data">       444</td>
+<td class="r Data">     1,788</td>
+<td class="r Data">  4.0</td>
+</tr>
+<tr>
+<td class="l Data">Surry</td>
+<td class="r Data">    72,860</td>
+<td class="r Data">    71,208</td>
+<td class="r Data">     1,652</td>
+<td class="r Data">  2.3</td>
+<td class="r Data">     7,553</td>
+<td class="r Data">     6,565</td>
+<td class="r Data">       988</td>
+<td class="r Data">       664</td>
+<td class="r Data">  0.9</td>
+</tr>
+<tr>
+<td class="l Data">Swain</td>
+<td class="r Data">    13,868</td>
+<td class="r Data">    12,980</td>
+<td class="r Data">       888</td>
+<td class="r Data">  6.8</td>
+<td class="r Data">     1,503</td>
+<td class="r Data">     1,417</td>
+<td class="r Data">        86</td>
+<td class="r Data">       802</td>
+<td class="r Data">  6.2</td>
+</tr>
+<tr>
+<td class="l Data">Transylvania</td>
+<td class="r Data">    32,413</td>
+<td class="r Data">    29,316</td>
+<td class="r Data">     3,097</td>
+<td class="r Data"> 10.6</td>
+<td class="r Data">     2,330</td>
+<td class="r Data">     2,965</td>
+<td class="r Data">      -635</td>
+<td class="r Data">     3,732</td>
+<td class="r Data"> 12.7</td>
+</tr>
+<tr>
+<td class="l Data">Tyrrell</td>
+<td class="r Data">     4,411</td>
+<td class="r Data">     4,143</td>
+<td class="r Data">       268</td>
+<td class="r Data">  6.5</td>
+<td class="r Data">       396</td>
+<td class="r Data">       344</td>
+<td class="r Data">        52</td>
+<td class="r Data">       216</td>
+<td class="r Data">  5.2</td>
+</tr>
+<tr>
+<td class="l Data">Union</td>
+<td class="r Data">   192,305</td>
+<td class="r Data">   123,834</td>
+<td class="r Data">    68,471</td>
+<td class="r Data"> 55.3</td>
+<td class="r Data">    20,582</td>
+<td class="r Data">     7,802</td>
+<td class="r Data">    12,780</td>
+<td class="r Data">    55,691</td>
+<td class="r Data"> 45.0</td>
+</tr>
+<tr>
+<td class="l Data">Vance</td>
+<td class="r Data">    45,091</td>
+<td class="r Data">    42,946</td>
+<td class="r Data">     2,145</td>
+<td class="r Data">  5.0</td>
+<td class="r Data">     5,754</td>
+<td class="r Data">     3,879</td>
+<td class="r Data">     1,875</td>
+<td class="r Data">       270</td>
+<td class="r Data">  0.6</td>
+</tr>
+<tr>
+<td class="l Data">Wake</td>
+<td class="r Data">   856,927</td>
+<td class="r Data">   627,906</td>
+<td class="r Data">   229,021</td>
+<td class="r Data"> 36.5</td>
+<td class="r Data">    97,559</td>
+<td class="r Data">    29,703</td>
+<td class="r Data">    67,856</td>
+<td class="r Data">   161,165</td>
+<td class="r Data"> 25.7</td>
+</tr>
+<tr>
+<td class="l Data">Warren</td>
+<td class="r Data">    20,762</td>
+<td class="r Data">    19,861</td>
+<td class="r Data">       901</td>
+<td class="r Data">  4.5</td>
+<td class="r Data">     1,722</td>
+<td class="r Data">     1,892</td>
+<td class="r Data">      -170</td>
+<td class="r Data">     1,071</td>
+<td class="r Data">  5.4</td>
+</tr>
+<tr>
+<td class="l Data">Washington</td>
+<td class="r Data">    13,326</td>
+<td class="r Data">    13,730</td>
+<td class="r Data">      -404</td>
+<td class="r Data"> -2.9</td>
+<td class="r Data">     1,448</td>
+<td class="r Data">     1,316</td>
+<td class="r Data">       132</td>
+<td class="r Data">      -536</td>
+<td class="r Data"> -3.9</td>
+</tr>
+<tr>
+<td class="l Data">Watauga</td>
+<td class="r Data">    49,499</td>
+<td class="r Data">    42,684</td>
+<td class="r Data">     6,815</td>
+<td class="r Data"> 16.0</td>
+<td class="r Data">     3,010</td>
+<td class="r Data">     2,412</td>
+<td class="r Data">       598</td>
+<td class="r Data">     6,217</td>
+<td class="r Data"> 14.6</td>
+</tr>
+<tr>
+<td class="l Data">Wayne</td>
+<td class="r Data">   120,000</td>
+<td class="r Data">   113,449</td>
+<td class="r Data">     6,551</td>
+<td class="r Data">  5.8</td>
+<td class="r Data">    14,463</td>
+<td class="r Data">     8,763</td>
+<td class="r Data">     5,700</td>
+<td class="r Data">       851</td>
+<td class="r Data">  0.8</td>
+</tr>
+<tr>
+<td class="l Data">Wilkes</td>
+<td class="r Data">    68,768</td>
+<td class="r Data">    65,630</td>
+<td class="r Data">     3,138</td>
+<td class="r Data">  4.8</td>
+<td class="r Data">     6,832</td>
+<td class="r Data">     5,548</td>
+<td class="r Data">     1,284</td>
+<td class="r Data">     1,854</td>
+<td class="r Data">  2.8</td>
+</tr>
+<tr>
+<td class="l Data">Wilson</td>
+<td class="r Data">    79,626</td>
+<td class="r Data">    73,810</td>
+<td class="r Data">     5,816</td>
+<td class="r Data">  7.9</td>
+<td class="r Data">     8,942</td>
+<td class="r Data">     6,284</td>
+<td class="r Data">     2,658</td>
+<td class="r Data">     3,158</td>
+<td class="r Data">  4.3</td>
+</tr>
+<tr>
+<td class="l Data">Yadkin</td>
+<td class="r Data">    38,126</td>
+<td class="r Data">    36,352</td>
+<td class="r Data">     1,774</td>
+<td class="r Data">  4.9</td>
+<td class="r Data">     3,904</td>
+<td class="r Data">     3,114</td>
+<td class="r Data">       790</td>
+<td class="r Data">       984</td>
+<td class="r Data">  2.7</td>
+</tr>
+<tr>
+<td class="l Data">Yancey</td>
+<td class="r Data">    17,943</td>
+<td class="r Data">    17,758</td>
+<td class="r Data">       185</td>
+<td class="r Data">  1.0</td>
+<td class="r Data">     1,516</td>
+<td class="r Data">     1,619</td>
+<td class="r Data">      -103</td>
+<td class="r Data">       288</td>
+<td class="r Data">  1.6</td>
+</tr>
+<tr>
+<td class="l Data">STATE</td>
+<td class="r Data"> 9,278,794</td>
+<td class="r Data"> 8,046,668</td>
+<td class="r Data"> 1,232,126</td>
+<td class="r Data"> 15.3</td>
+<td class="r Data"> 1,011,105</td>
+<td class="r Data">   604,845</td>
+<td class="r Data">   406,260</td>
+<td class="r Data">   825,866</td>
+<td class="r Data"> 10.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemFooter"><a href="#top">Return to Top</a>
+</td>
+</tr>
+<tr>
+<td class="c SystemFooter" style=" font-size: 10pt;">Last updated 31AUG2011</td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>
