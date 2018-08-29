@@ -102,7 +102,7 @@ my_url <- "https://en.wikipedia.org/wiki/List_of_hospitals_in_North_Carolina"
 hospitals <- my_url %>%
   html_session() %>%
   html_nodes(xpath='//*[@id="mw-content-text"]/div/table[1]') %>%
-  html_table()
+  html_table(fill = TRUE)
 
 hospitals <- hospitals[[1]]
 
@@ -138,23 +138,25 @@ poverty_county_1 %>%
 # modeling ----------------------------------------------------------------
 
 
-fit <- lm(county_total~ july_2016_estimate + estimate + births, data = poverty_hospitals)
+fit <- lm(county_total~ july_2016_estimate + estimate + births, data = poverty_hospitals %>% 
+            filter(my_date=="2018-08-01"))
 
 fit_mle <- lme4::lmer(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
                  data = poverty_hospitals)
 
-fit_bayes <- brm(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
-                 data = poverty_hospitals,
-                iter = 2000, chains = 3, cores = 3)
-summary(fit)
-summary(fit_bayes)
-plot(marginal_effects(fit_bayes))
-
-predict(fit, se.fit = T)$se.fit
+# fit_bayes <- brm(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
+#                  data = poverty_hospitals,
+#                 iter = 2000, chains = 3, cores = 3)
+# summary(fit)
+# summary(fit_bayes)
+# plot(marginal_effects(fit_bayes))
+# 
+# predict(fit, se.fit = T)$se.fit
 library(modelr)
-predict(fit_bayes, robust = TRUE)
+# predict(fit_bayes, robust = TRUE)
 poverty_county_1 %>% 
   filter(!is.na(births)) %>% 
+  filter(my_date=="2018-08-01") %>% 
   add_predictions(data = ., model = fit) %>%
   mutate(resids = (county_total - pred)/1000) %>% 
   add_column(error = predict(fit, se.fit = T)$se.fit/1000)->poverty_county_predictions
@@ -181,8 +183,9 @@ poverty_county_predictions %>%
     caption = "Data from: American Community Survey \nAug 2018 NCDHHS Enrollment Reports \n 2016 NC OSBM Population Estimates"
   )+
   xlab("")+
-  ylab("Delta vs Prediction (1000s) \n(Positive = Greater Than Predicted, Negative = Less than Predicted)")+
-  ggsave("2018-08_predicted_medicaid_nc.pdf", width = 11, height = 8)
+  ylab("Delta vs Prediction (1000s) \n(Positive = Greater Than Predicted, Negative = Less than Predicted)") ->predictions
+#predictions  
+#ggsave(predictions, "2018-08_predicted_medicaid_nc.pdf", width = 11, height = 8)
 
 # general trends ----------------------------------------------------------
 library(scales)
@@ -206,8 +209,9 @@ poverty_hospitals %>%
   )+
   geom_text(aes(x = lubridate::ymd("2018-06-01"), y = 90-20, label = "Forsyth"), color = "black")+
   geom_text(data = top_5_labels, 
-            aes(my_date-45, county_total/1000+5, label = county_name), color = "grey")+
-  ggsave("2018_nc_medicaid_trends_by_county.pdf", width = 11, height = 8)
+            aes(my_date-45, county_total/1000+5, label = county_name), color = "grey") -> county_trends
+#county_trends  
+#ggsave(county_trends, "2018_nc_medicaid_trends_by_county.pdf", width = 11, height = 8)
 
 poverty_hospitals %>% 
   filter(county_name == "Forsyth") %>% 
@@ -225,8 +229,9 @@ poverty_hospitals %>%
     x = NULL,
     y= "Enrollments/ Month"
   )+
-  theme_minimal()+
-  ggsave("2018_forsyth_medicaid_trends_by_county.pdf", width = 11, height = 8)
+  theme_minimal()-> forsyth_trends
+#forsyth_trends  
+#ggsave(forsyth_trends, "2018_forsyth_medicaid_trends_by_county.pdf", width = 11, height = 8)
 
 # time series forecasting -------------------------------------------------
 library(fpp2)
@@ -237,10 +242,10 @@ medicaid_format %>%
   arrange(my_date)->medicaid_forsyth
 
 forsyth_ts <- ts(data = medicaid_forsyth$county_total, frequency = 12, start = c(2015,7) )
-forsyth_ts
+#forsyth_ts
 
 #Graph Time Series
-autoplot(forsyth_ts)
+#autoplot(forsyth_ts)
 
 # Seasonal Decomp for Forsyth
 forsyth_ts %>% 
@@ -256,8 +261,8 @@ forsyth_ts %>% forecast() %>%
   labs(
     title = "Forecasted Medicaid Enrollments by Month for Forsyth County",
     subtitle = "Using ETS(A,A,N)"
-  )+
-  ggsave("2018_medicaid_enrollment_forecasts.pdf", width = 11, height = 8)
+  )->forsyth_medicaid_forecast
+#ggsave(forsyth_medicaid_forecast, "2018_medicaid_enrollment_forecasts.pdf", width = 11, height = 8)
 
 #exponsential smoothing method
 autoplot(fc) +
