@@ -55,9 +55,10 @@ df_3 %>%
   facet_wrap(~title_param, scales = "free_y")+
   theme_minimal()+
   labs(
-    "Quarter by Quarter Reporting for WFUBMC",
+    title = "Quarter by Quarter Reporting for WFUBMC",
     caption = "Data from https://www.wakehealth.edu/About-Us/Financial-Statement"
   ) -> quarterly_hospital
 
-  ggsave(quarterly_hospital, "2018_08-Hospital_Numbers_Quarter_by_Quarter.pdf", 
-         height = 8, width = 10, device = "pdf")
+
+  ggsave(quarterly_hospital, filename = "2018_08-Hospital_Numbers_Quarter_by_Quarter.pdf", 
+         height = 8, width = 10, units = "in", device = "pdf")

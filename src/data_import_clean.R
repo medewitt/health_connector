@@ -22,6 +22,8 @@ county1 <- read_excel("data/countygrowth_2009.xlsx", skip = 3) %>%
   setNames(gsub(pattern = "\\.", replacement = "_", x = names(.)))
 
 
+
+
 path <- "data/SFY_2019_Enrollment_Counts_by_County_and_Budget_Groups_0_2.xlsx"
 
 path %>% 
@@ -145,9 +147,12 @@ poverty_county_1 %>%
 
 fit <- lm(county_total~ july_2016_estimate + estimate + births, data = poverty_hospitals %>% 
             filter(my_date=="2018-08-01"))
+plot(fit)
+poverty_hospitals %>% 
+  filter(my_date=="2018-08-01")->modeled_data
 
 fit_mle <- lme4::lmer(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
-                 data = poverty_hospitals)
+                 data = modeled_data)
 
 # fit_bayes <- brm(county_total~ july_2016_estimate + estimate + births + (1|n_hospitals), 
 #                  data = poverty_hospitals,
