@@ -16,6 +16,11 @@ county <- read_excel("data/countygrowth_cert_2016.xls", skip = 3) %>%
   setNames(make.names(names(.))) %>% 
   setNames(gsub(pattern = "\\.", replacement = "_", x = names(.)))
 
+county1 <- read_excel("data/countygrowth_2009.xlsx", skip = 3) %>% 
+  setNames(tolower(names(.))) %>% 
+  setNames(make.names(names(.))) %>% 
+  setNames(gsub(pattern = "\\.", replacement = "_", x = names(.)))
+
 
 path <- "data/SFY_2019_Enrollment_Counts_by_County_and_Budget_Groups_0_2.xlsx"
 
