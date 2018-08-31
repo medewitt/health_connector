@@ -88,3 +88,26 @@ forsyth_growth_nc <-all_population %>%
 
 library(patchwork)
 population_growth_nc + forsyth_growth_nc + ggsave("nc_population_dynamics.pdf")
+
+
+# extra analysis ----------------------------------------------------------
+
+all_population %>% 
+  filter(county == "Forsyth") %>% 
+  summarise(avg = mean(my_delta),
+            min = min(my_delta),
+            max = max(my_delta),
+            n())
+
+medicaid_format %>% 
+  ungroup() %>% 
+  filter(county_name == "Forsyth") %>% 
+  filter(county_total>0) %>% 
+  select(county_name, my_date, county_total) %>% 
+  arrange(my_date) %>% 
+  mutate(my_delta = county_total - lag(county_total, n = 1, default = 1)) %>% 
+  mutate(my_year = lubridate::year(my_date))%>% 
+  group_by(my_year) %>% 
+  filter(my_delta < 10000) %>% 
+  summarise(yearly = sum(my_delta)) %>% 
+  mutate(avg = mean(yearly))
