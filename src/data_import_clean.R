@@ -22,8 +22,6 @@ county1 <- read_excel("data/countygrowth_2009.xlsx", skip = 3) %>%
   setNames(gsub(pattern = "\\.", replacement = "_", x = names(.)))
 
 
-
-
 path <- "data/SFY_2019_Enrollment_Counts_by_County_and_Budget_Groups_0_2.xlsx"
 
 path %>% 
@@ -99,7 +97,8 @@ county_pov %>%
     string = NAME,
     pattern = " County, North Carolina",
     replacement = ""
-  ))->county_pov_2
+  )) %>% 
+  mutate(my_county = str_to_title(my_county))->county_pov_2
 
 
 # number of hospitals -----------------------------------------------------
@@ -202,6 +201,8 @@ library(scales)
 poverty_hospitals %>% 
   filter(my_date==max(my_date)) %>% 
   top_n( 4, county_total)->top_5_labels
+
+write_csv(poverty_hospitals, "outputs/poverty_data_combined.csv")
 
 poverty_hospitals %>% 
   mutate(my_color = as_factor(ifelse(county_name == "Forsyth", "Black", "Grey"))) %>% 
